@@ -28,7 +28,7 @@ export class AppComponent {
 
   ngOnInit() {
     this.roomList = new Array <Room>();
-    this.obsRoom = this.http.get<Room[]>("https://my-json-server.typicode.com/malizia-g/hotel/songlist");
+    this.obsRoom = this.http.get<Room[]>("https://my-json-server.typicode.com/malizia-g/hotel/booking");
     this.obsRoom.subscribe(this.getRoom);
   }
 
