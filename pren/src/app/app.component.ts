@@ -19,7 +19,7 @@ export class AppComponent {
   title = "prenotazioni";
   bookings = BookingList;
   selectedRoom: Booking = BookingList[0];
-  roomList: Room[];  //Questo vettore va passato al componente sonList
+  roomList: Room[];
   obsRoom : Observable<Room[]>;
 
   constructor(public  http: HttpClient) {
@@ -37,13 +37,12 @@ export class AppComponent {
     this.roomList = data;
   }
 
-  /*Il metodo on CLick controlla cerca l'album selezionato in base al titolo e aggiunge la canzone
-  Selezionata alla songList*/
+
   onClick(f: HTMLInputElement  ,t : HTMLInputElement, n :HTMLInputElement,  s :HTMLInputElement ) : boolean
   {
     this.selectedRoom = BookingList.find((booking: Booking) => booking.name == this.selectedOption);
     this.roomList.push(new Room(this.selectedRoom, new Date(f.value),new Date(t.value), String(n.value), s.value));
-    //Dopo aver aggiunto la canzone azzero tutti i campi
+
     f.value ="";
     t.value ="";
     n.value="";
