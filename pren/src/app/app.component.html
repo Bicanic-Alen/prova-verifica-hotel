@@ -3,10 +3,6 @@
     Welcome to {{ title }}!
   </h1>
 
-  <h2>
-    1) Scegli un disco dall'elenco
-  </h2>
-
   <select [(ngModel)]="selectedOption"  (change)="onChange()">
     <option [value]="booking.name" *ngFor="let booking of bookings"> {{booking.name}}</option>
   </select> <br>
@@ -18,12 +14,6 @@
 
 
   <div *ngIf="selectedOption">
-    <h3>
-      2) Ora seleziona una canzone da aggiungere all'album selezionato
-    </h3>
-
-
-
     <form>
       <input type="date" #f> : da <br>
       <input type="date" #t> : a <br>
