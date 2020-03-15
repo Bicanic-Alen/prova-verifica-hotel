@@ -2,7 +2,10 @@
 
 
 <ul *ngIf ="mostraLista">
-    <li *ngFor="let room of roomList">
-      {{room.booking.name}} | {{room.Name}} | {{room.Surname}} | check-in: {{room.from}} | check-out: {{room.to}}
+    <li *ngFor="let room of roomList"  >
+      || nome : {{room.name}} || cognome:  {{room.surname}} || check-in: {{room.from}} || check-out: {{room.to}}
     </li>
+
+
+
 </ul>

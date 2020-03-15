@@ -4,8 +4,9 @@
   </h1>
   <h2>Seleziona camera:</h2>
   <select [(ngModel)]="selectedOption"  (change)="onChange()">
-    <option [value]="booking.name" *ngFor="let booking of bookings"> Stanza: {{booking.name}} | n° letti matrimoniali: {{booking.num_D_bed}}, letti singoli: {{booking.num_S_bed}}</option>
+    <option [value]="booking.name" *ngFor="let booking of bookings"> Stanza: {{booking.name}}</option>
   </select> <br>
+
 
 
   {{selectedOption}}
@@ -13,6 +14,7 @@
   <hr>
 
   <div *ngIf="selectedOption">
+    <app-dettagli-stanza [booking]="selectedRoom"></app-dettagli-stanza>
     <form>
       <input type="date" #f> : da <br>
       <input type="date" #t> : a <br>
@@ -26,7 +28,7 @@
 
 
 
-  <app-lista-pren [roomList] = "roomList"> </app-lista-pren>
+  <app-lista-pren [roomList] = "roomList" [stanza] = "bookings" class="card"> </app-lista-pren>
 
 
 </div>

@@ -9,12 +9,14 @@ import { BookingList } from './bookingList.model';
 import { Booking } from './booking.model';
 import { Room } from './room.model';
 import { ListaPrenComponent } from './lista-pren/lista-pren.component';
+import { DettagliStanzaComponent } from './dettagli-stanza/dettagli-stanza.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListaPrenComponent
+    ListaPrenComponent,
+    DettagliStanzaComponent
   ],
   imports: [
     BrowserModule,

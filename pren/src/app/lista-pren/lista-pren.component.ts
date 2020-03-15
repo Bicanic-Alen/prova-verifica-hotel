@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Room } from '../room.model';
+import { Booking } from '../booking.model';
 
 @Component({
   selector: 'app-lista-pren',
@@ -8,6 +9,7 @@ import { Room } from '../room.model';
 })
 export class ListaPrenComponent implements OnInit {
   @Input() roomList: Room[];
+  @Input() stanza: Booking[];
   mostraLista : boolean = true;
   constructor() { }
 
