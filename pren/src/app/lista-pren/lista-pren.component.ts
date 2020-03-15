@@ -9,7 +9,7 @@ import { Booking } from '../booking.model';
 })
 export class ListaPrenComponent implements OnInit {
   @Input() roomList: Room[];
-  @Input() stanza: Booking[];
+
   mostraLista : boolean = true;
   constructor() { }
 
