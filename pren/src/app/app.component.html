@@ -1,17 +1,16 @@
 <div>
   <h1>
-    Welcome to {{ title }}!
+    {{ title }}
   </h1>
-
+  <h2>Seleziona camera:</h2>
   <select [(ngModel)]="selectedOption"  (change)="onChange()">
-    <option [value]="booking.name" *ngFor="let booking of bookings"> {{booking.name}}</option>
+    <option [value]="booking.name" *ngFor="let booking of bookings"> Stanza: {{booking.name}} | n° letti matrimoniali: {{booking.num_D_bed}}, letti singoli: {{booking.num_S_bed}}</option>
   </select> <br>
 
 
   {{selectedOption}}
 
   <hr>
-
 
   <div *ngIf="selectedOption">
     <form>
