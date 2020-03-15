@@ -8,11 +8,13 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { BookingList } from './bookingList.model';
 import { Booking } from './booking.model';
 import { Room } from './room.model';
+import { ListaPrenComponent } from './lista-pren/lista-pren.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ListaPrenComponent
   ],
   imports: [
     BrowserModule,

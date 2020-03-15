@@ -1,0 +1,8 @@
+<button class="btn btn-primary" (click)="hideList()">nascondi/mostra</button>
+
+
+<ul *ngIf ="mostraLista">
+    <li *ngFor="let room of roomList">
+      {{room.booking}}
+    </li>
+</ul>
